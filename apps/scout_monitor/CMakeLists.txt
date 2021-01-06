@@ -9,7 +9,7 @@ set(SCOUT_MONITOR_SRC
     src/scout_monitor.cpp
 )
 add_library(monitor STATIC ${SCOUT_MONITOR_SRC})
-target_link_libraries(monitor ugv_sdk ${CURSES_LIBRARIES})
+target_link_libraries(monitor westonrobot::ugv_sdk ${CURSES_LIBRARIES})
 target_include_directories(monitor PUBLIC
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<BUILD_INTERFACE:${CURSES_INCLUDE_DIR}>
