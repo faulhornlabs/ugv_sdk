@@ -43,7 +43,6 @@ void MobileBase::Disconnect() {
 
 void MobileBase::Terminate() {
   keep_running_ = false;
-  std::terminate();
 }
 
 void MobileBase::ConfigureCAN(const std::string &can_if_name) {
