@@ -5,6 +5,7 @@ include(CMakeFindDependencyMacro)
 
 # Same syntax as find_package
 find_dependency(Threads REQUIRED)
+find_dependency(wrp_io)
 
 # Any extra setup
 
