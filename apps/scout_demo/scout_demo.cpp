@@ -114,7 +114,7 @@ int main(int argc, char **argv) {
               << state.angular_velocity << std::endl;
     std::cout << "-------------------------------" << std::endl;
 
-    usleep(20000);
+    std::this_thread::sleep_for(std::chrono::microseconds(20000));
     ++count;
   }
 

@@ -84,7 +84,7 @@ int main(int argc, char **argv)
         std::cout << "velocity (linear, angular): " << state.linear_velocity << ", " << state.steering_angle << std::endl;
         std::cout << "-------------------------------" << std::endl;
 
-        sleep(1);
+        std::this_thread::sleep_for(std::chrono::seconds(1));
         ++count;
     }
 

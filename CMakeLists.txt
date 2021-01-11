@@ -21,6 +21,14 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE ${default_build_type})
 endif()
 
+if (NOT CMAKE_DEBUG_POSTFIX)
+    set(CMAKE_DEBUG_POSTFIX _d)
+endif()
+if (NOT CMAKE_RELWITHDEBINFO_POSTFIX)
+    set(CMAKE_RELWITHDEBINFO_POSTFIX _rd)
+endif()
+
+
 ## Use GNUInstallDirs to install libraries into correct locations on all platforms.
 include(GNUInstallDirs)
 message(STATUS "Project will be installed to ${CMAKE_INSTALL_PREFIX} with 'make install'")
