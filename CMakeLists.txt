@@ -7,6 +7,8 @@ if(CCACHE_PROGRAM)
     set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
 endif()
 
+option(BUILD_APPS "Build applications" ON)
+
 ## Generate symbols for IDE indexer
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -69,7 +71,9 @@ if(BUILD_MONITOR AND NOT CURSES_FOUND)
 endif()
 
 # add app source directory
-add_subdirectory(apps)
+if (BUILD_APPS)
+    add_subdirectory(apps)
+endif()
 
 # targets to install
 install(TARGETS ${PROJECT_NAME}
